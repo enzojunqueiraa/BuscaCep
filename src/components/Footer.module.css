@@ -1,0 +1,13 @@
+.footer{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(103, 103, 189);
+    color: aliceblue;
+}
+
+.footer span{
+    font-weight: bold;
+    color: azure;
+}
