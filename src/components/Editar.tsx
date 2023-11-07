@@ -16,8 +16,29 @@ const Editar = () => {
     const parametro = useParams();
 
     const atualizar = (e: FormEvent) => {
+        e.preventDefault();
+        const dados = {
+            id: id,
+            nome: nome,
+            email: email,
+            cpf: cpf
+        }
 
-    }
+        axios.put("http://10.137.9.134:8000/api/update",
+        dados,{
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            }
+        }).then(function(response){
+            window.location.href = "/listagem"
+        }).catch(function(error){
+            console.log('Ocorreu um erro ao atualizar');
+        });
+        }
+        
+    
+    
 
     useEffect(() => {
       async function fetchData(){
