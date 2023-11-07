@@ -7,6 +7,7 @@ import {
 import BuscaCep from "../components/BuscaCepForm";
 import Cadastro from "../components/Cadastro";
 import Listagem from "../components/Listagem";
+import Editar from "../components/Editar";
 
 const AppRouter = () => {
 
@@ -23,6 +24,9 @@ const AppRouter = () => {
 
                 <Route path="listagem"
                     element={<Listagem />} />
+
+                <Route path="/editar/:id" 
+                    element={<Editar />} />
 
             </Routes>
 
